@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
-import { RefreshCw, CheckCircle, XCircle, Clock } from 'lucide-react';
+import { RefreshCw, CheckCircle, XCircle } from 'lucide-react';
 
 export default function AdminModal({ isOpen, onClose }) {
   const [reservations, setReservations] = useState([]);

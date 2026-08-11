@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Calendar, MessageSquare, Check, Sparkles, Loader2 } from 'lucide-react';
+import { Calendar, Check, Loader2 } from 'lucide-react';
 import { api } from '../services/api';
 
 export default function ReservationModal({ isOpen, onClose }) {
