@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import FineDiningMenu from './components/FineDiningMenu';
 import ReservationModal from './components/ReservationModal';
-import AdminModal from './components/AdminModal';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isReservationOpen, setIsReservationOpen] = useState(false);
-  const [isAdminOpen, setIsAdminOpen] = useState(false);
 
   const scrollToElement = (id) => {
     const el = document.getElementById(id);
@@ -201,23 +199,6 @@ export default function App() {
             <span className="signature-name">La Gabbia Restaurant</span>
           </div>
         </div>
-        <div style={{ marginTop: '10px', fontSize: '0.85rem', opacity: 0.5 }}>
-          <button 
-            onClick={() => setIsAdminOpen(true)}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', textDecoration: 'underline', fontFamily: 'inherit' }}
-          >
-            [Yönetici Paneli]
-          </button>
-          {' · '}
-          <a 
-            href="http://127.0.0.1:8088/docs" 
-            target="_blank" 
-            rel="noreferrer"
-            style={{ color: 'inherit' }}
-          >
-            [FastAPI Swagger Docs]
-          </a>
-        </div>
       </footer>
 
       {/* 6. FINE DINING ITALIAN MENU MODAL */}
@@ -229,12 +210,6 @@ export default function App() {
       <ReservationModal 
         isOpen={isReservationOpen} 
         onClose={() => setIsReservationOpen(false)} 
-      />
-
-      {/* 8. ADMIN RESERVATION MANAGEMENT MODAL */}
-      <AdminModal 
-        isOpen={isAdminOpen} 
-        onClose={() => setIsAdminOpen(false)} 
       />
 
     </div>
